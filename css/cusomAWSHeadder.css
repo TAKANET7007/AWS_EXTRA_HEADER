@@ -1,0 +1,36 @@
+.aws_custom_header{
+  margin-top: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aws_custom_header__inner{
+  max-width: 1152px;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.aws_custom_header__logo{
+  flex: none;
+  width: auto;
+  height: auto;
+}
+.aws_custom_header__navgroup{
+  margin-left: auto;
+  display: flex;
+  flex: none;
+}
+.aws_custom_header__navgroup > * + *{
+  margin-left: 60px;
+}
+.aws_custom_header__navitem{
+  font-size: 16px;
+  color: #fff;
+}

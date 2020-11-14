@@ -1,0 +1,88 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  padding: 1rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  font-weight: normal;
+  font-size: .875rem;
+  color: #666;
+  background: #eee;
+  position: sticky;
+  top: 0;
+}
+svg {
+  width: 80px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: .5rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'El Messiri', sans-serif;
+}
+
+/* Circle */
+.close {
+	font-size: .875rem;
+	position: relative;
+	width: 1.4em;
+	height: 1.4em;
+	border: 0.1em solid #993333;
+	border-radius: 100%;
+}
+/* L */
+.close::before {
+	position: absolute;
+	top: 0.2em;
+	left: 0.6em;
+	width: 0.2em;
+	height: 1em;
+	content: "";
+	background-color: #993333;
+	transform: rotate(45deg);
+}
+/* R */
+.close::after {
+	position: absolute;
+	top: 0.6em;
+	left: 0.2em;
+	width: 1em;
+	height: 0.2em;
+	content: "";
+	background-color: #993333;
+	transform: rotate(225deg);
+}
+
+
+/* Button CSS　*/
+.btn{
+  text-align: center;
+}
+
+.btn-border {
+  display: inline-block;
+  max-width: 180px;
+  text-align: left;
+  border: 2px solid #9ec34b;
+  font-size: 16px;
+  color: #9ec34b;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: .4s;
+}
+
+.btn-border:hover {
+  background-color: #9ec34b;
+  border-color: #cbe585;
+  color: #FFF;
+}
