@@ -3,7 +3,6 @@ window.onload = function() {
     var allKeys = Object.keys(value);
     allKeys.forEach(function(val, index, ar) {
       var htmlString = `
-      <div id="optionSets` + val + `">
         <tr>
           <td><svg width="50" height="50" data-jdenticon-value="` + value[val].awsid + value[val].awsuser + `"></svg></td>
           <td><div id="awsid` + val + `">` + value[val].awsid + `</div></td>
@@ -12,8 +11,7 @@ window.onload = function() {
           <td><input id="fontColor` + val + `" type="text" value="` + value[val].fontColor + `"></td>
           <td><input id="memo` + val + `" type="text" value="` + value[val].memo + `"></td>
           <td><div class="close" id="delete` + val + `"></div></td>
-        </tr>
-      </div>`
+        </tr>`
       var table = document.getElementById('optionTable');
       table.insertAdjacentHTML('beforeend', htmlString);
       document.getElementById("delete" + val).addEventListener('click', deleteClick);
@@ -27,7 +25,7 @@ function saveClick() {
   var dataObj = {};
   chrome.storage.sync.clear();
   for (let i = 0; i < 1000; i++) {
-    var table = document.getElementById('optionSets' + i);
+    var table = document.getElementById('awsid' + i);
     if (table != null) {
       var data = {
         "awsid": document.getElementById('awsid' + i).innerHTML,
@@ -52,5 +50,5 @@ function deleteClick(elem) {
   console.log(elem);
   console.log(elem.srcElement.parentNode.parentNode);
 
-  elem.srcElement.parentNode.parentNode.parentNode.remove();
+  elem.srcElement.parentNode.parentNode.remove();
 }
